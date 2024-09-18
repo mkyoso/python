@@ -1,0 +1,45 @@
+---
+### RHEL Template Check
+#
+#
+COMMONS:
+  PATH: "db"
+  DATA: "data"
+  LOG: "pandas‗sqlite.log"
+
+## DB生成用
+# tablesにて指定したCSVファイル名をテーブル取り込みします
+# テーブル化する際に日付列がある場合は[テーブル名][DATATIME]にカラム名を入力
+DATABASES:
+  NAME: "pandas‗sqlite.db"
+  TBLNAME: "hourly_data"
+
+## SQLクエリ用変数
+# actionsにて内部結合処理の各パラメーターを定義
+# ・join　… inner用
+# ・left　… 左内部結合
+# ・right … 右内部結合
+# ・outer … 外部結合
+
+QUERYS:
+  actions:
+    - "insert"
+  insert:
+    TBLNAME: "hourly_data"
+  concat:
+    L_TBLNAME: ""
+    R_TBLNAME: ""
+  merge:
+    HOW: "left"
+    L_TBLNAME: ""
+    L_KEY: ""
+    R_TBLNAME: ""
+    R_KEY: ""
+    PARAM: ""
+  outer:
+    HOW: "outer"
+    L_TBLNAME: ""
+    L_KEY: ""
+    R_TBLNAME: ""
+    R_KEY: ""
+    PARAM: ""
