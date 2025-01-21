@@ -44,7 +44,6 @@ title: "README"
 
 ---
 
-<small>
 <!-- プロジェクトの説明を記載 -->
 
 ## 本スクリプトについて
@@ -75,7 +74,10 @@ Python クロスプラットフォームデスクトップアプリを作成す�
 
 各コンテンツ(機能)は個々のページとして実装しています。<br>
 親ページ内のコンテンツ領域に各機能を上書きすることで画面遷移を行っています。<br>
+
+::: note info
 **今回の実装ではページ間のデータ引き渡しは実装していません。**<br>
+:::
 
 ### 機能一覧
 
@@ -94,6 +96,8 @@ Python クロスプラットフォームデスクトップアプリを作成す�
 
 #### ダッシュボード
 
+![HOME](./img/py_Flet_WEBLayout_Sample_index.png)
+
 Flet の以下コントロールを用いてダッシュボード風の画面を構成するサンプルとなります。<br>
 
 **利用 Flet コントロール**
@@ -110,9 +114,13 @@ Flet の以下コントロールを用いてダッシュボード風の画面を
 | 9 | Charts | BarChart |
 | 10 | Charts | LineChart |
 
-カードでは、Python 標準ライブラリの*calendar*、*datetime*を使用して日時情報およびカレンダーを実装するサンプルとなっています。<br>
+:::note info
+カードでは、Python 標準ライブラリの*calendar*、*datetime*を使用して日時情報およびカレンダーを実装するサンプルとなっています。
+:::
 
 #### ディレクトリ検索
+
+![CHECK](./img/py_Flet_WEBLayout_Sample_FILE_CHECK.png)
 
 指定ディレクトリを走査し、走査結果をデータフレーム表示するサンプルとなります。<br>
 
@@ -136,6 +144,8 @@ Flet の以下コントロールを用いてダッシュボード風の画面を
 
 #### ファイル読込#1
 
+![OPEN](./img/py_Flet_WEBLayout_Sample_FILE_OPEN.png)
+
 指定されたファイルのデータを取得し、データを表示するサンプルとなります。<br>
 
 **利用 Flet コントロール**
@@ -145,18 +155,21 @@ Flet の以下コントロールを用いてダッシュボード風の画面を
 | 2 | Layout | Column |
 | 3 | Layout | Container |
 | 4 | Layout | Divider |
-| 5 | Layout | ListView |
-| 6 | Layout | Row |
-| 7 | Layout | Tabs |
-| 8 | Layout | View |
-| 9 | Information Displays | Icon |
-| 10 | Information Displays | Text |
-| 11 | Information Displays | ProgressRing |
-| 12 | Buttons | ElevatedButton |
-| 13 | Input and Selections | TextField|
-| 14 | Utility | FilePicker|
+| 5 | Layout | ListTile |
+| 6 | Layout | ListView |
+| 7 | Layout | Row |
+| 8 | Layout | Tabs |
+| 9 | Layout | View |
+| 10 | Information Displays | Icon |
+| 11 | Information Displays | Text |
+| 12 | Information Displays | ProgressRing |
+| 13 | Buttons | ElevatedButton |
+| 14 | Input and Selections | TextField|
+| 15 | Utility | FilePicker|
 
 #### ファイル比較
+
+![DIFF](./img/py_Flet_WEBLayout_Sample_FILE_COMPARE.png)
 
 指定ファイルを比較した結果を表示するサンプルとなります。<br>
 この機能では*difflib*ライブラリを使用して比較を行っています。<br>
@@ -170,16 +183,17 @@ Flet の以下コントロールを用いてダッシュボード風の画面を
 | 4 | Layout | Divider |
 | 5 | Layout | ListView |
 | 6 | Layout | Row |
-| 7 | Layout | Tabs |
-| 8 | Layout | View |
-| 9 | Information Displays | Icon |
-| 10 | Information Displays | Text |
-| 11 | Information Displays | ProgressRing |
-| 12 | Buttons | ElevatedButton |
-| 13 | Input and Selections | TextField|
-| 14 | Utility | FilePicker|
+| 7 | Layout | View |
+| 8 | Information Displays | Icon |
+| 9 | Information Displays | Text |
+| 10 | Information Displays | ProgressRing |
+| 11 | Buttons | ElevatedButton |
+| 12 | Input and Selections | TextField|
+| 13 | Utility | FilePicker|
 
 #### データテーブル操作
+
+![TABLE](./img/py_Flet_WEBLayout_Sample_TABLE_VIEW.png)
 
 SQLite を操作するサンプルとなります。<br>
 現在の実装ではデータベーステーブルの新規作成、データベースファイルの読み込みまでとなります。<br>
@@ -193,16 +207,16 @@ SQLite を操作するサンプルとなります。<br>
 | 4 | Layout | Divider |
 | 5 | Layout | ListView |
 | 6 | Layout | Row |
-| 7 | Layout | Tabs |
-| 8 | Layout | View |
-| 9 | Information Displays | Icon |
-| 10 | Information Displays | Text |
-| 11 | Information Displays | ProgressRing |
+| 7 | Layout | View |
+| 8 | Information Displays | Dropdown |
+| 9 | Information Displays | Text |
+| 10 | Information Displays | Icon |
+| 11 | Information Displays | Text |
 | 12 | Buttons | ElevatedButton |
-| 13 | Input and Selections | TextField|
-| 14 | Utility | FilePicker|
 
 #### ファイル読込#2
+
+![READ](./img/py_Flet_WEBLayout_Sample_README.png)
 
 テキストファイルの読み取り結果を表示するサンプルとなります。<br>
 
@@ -215,21 +229,66 @@ SQLite を操作するサンプルとなります。<br>
 | 4 | Layout | Divider |
 | 5 | Layout | ListView |
 | 6 | Layout | Row |
-| 7 | Layout | Tabs |
-| 8 | Layout | View |
-| 9 | Information Displays | Icon |
-| 10 | Information Displays | Text |
-| 11 | Information Displays | ProgressRing |
-| 12 | Buttons | ElevatedButton |
-| 13 | Input and Selections | TextField|
-| 14 | Utility | FilePicker|
+| 7 | Layout | View |
+| 8 | Information Displays | Icon |
+| 9 | Information Displays | Text |
 
 #### 画面遷移
 
 画面遷移は以下ファイルで実施しています。<br>
+routes.py はクラス化しています。<br>
 
 1. routes.py
 2. nav_side.py
+
+main.py 内で以下の関数を読み込みコンテンツ領域(Body)にて画面遷移を行っています。<br>
+
+```bash
+<main.py>
+#関数呼び出し
+from components.Views.routes import Router
+from components.user_controles.nav_bar import NavBar
+from components.user_controles.nav_side import NavMenu
+~中略~
+#画面遷移処理部
+    # 画面遷移処理(./components/Views/routes.py)定義
+    routes = Router(page)
+    page.on_route_change = routes.route_change
+
+    # 画面構成定義
+    page.add(
+        ft.Row(
+            [
+                ft.Column([NavMenu(page),]),
+                ft.VerticalDivider(width=1),
+                ft.Column([ routes.body ], alignment=ft.MainAxisAlignment.START, expand=True,auto_scroll=True),
+            ],
+            alignment=ft.MainAxisAlignment.START, expand=True
+        ),
+    )
+    # index.py(/)を初期画面に設定
+    page.go('/')
+```
+
+routes クラスで画面遷移用の URL を定義しています。<br>
+
+```bash
+<routes.py>
+    def __init__(self, page):
+        self.page = page
+        self.routes = {
+            "/": IndexView(page),
+            "/FILE_OPEN": FileOpenView(page),
+            "/FILE_CHECK": FileCheckView(page),
+            "/FILE_COMPARE": FileDiffView(page),
+            "/DATA_TABLE": DBView(page),
+            "/README_VIEW": ReadView(page),
+            "/SETTING_VIEW": SettingsView(page),
+            #------#
+        }
+        #初期表示View
+        self.body = ft.Container(content=self.routes['/']["view"])
+```
 
 ---
 
@@ -287,8 +346,5 @@ python -m pip install simpledatatable
 
 ## トラブルシューティング
 
-- Python 環境変数が定義されているか確認ください。
 - pip のバージョンが古い場合はアップグレードを実施して下さい。
 - 必要なライブラリが導入済みか確認ください。
-
-</small>
